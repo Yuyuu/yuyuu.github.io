@@ -1,0 +1,20 @@
+body {
+  padding-top: 20px;
+}
+
+.content h1 {
+  margin-bottom: 20px;
+}
+
+.thumbnails {
+  margin-bottom: 10px;
+}
+
+.thumbnails a {
+  margin: 0 5px;
+}
+
+.thumbnails img {
+  width: auto;
+  height: 35px;
+}
