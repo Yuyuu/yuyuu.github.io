@@ -2,8 +2,20 @@ body {
   padding-top: 20px;
 }
 
+section {
+  margin-bottom: 20px;
+}
+
 .content h1 {
   margin-bottom: 20px;
+}
+
+.content .skills {
+  border-right: thick solid #eee;
+}
+
+.content .skills button {
+  margin-bottom: 4px;
 }
 
 .thumbnails {
