@@ -1,5 +1,5 @@
 body {
-  padding-top: 20px;
+  padding-top: 50px;
 }
 
 section {
@@ -16,6 +16,15 @@ section {
 
 .content .skills button {
   margin-bottom: 4px;
+}
+
+.content .repo-icon {
+  width: auto;
+  height: 20px;
+}
+
+.separator {
+  width: 45%;
 }
 
 .thumbnails {
