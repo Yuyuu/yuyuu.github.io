@@ -1,10 +1,16 @@
 $(document).ready(function () {
   $('div.skills button').click(function () {
     var button = $(this);
-    $('#skill-description').load(pathToTemplate(button.data("tag")));
+
+    hidePreviousDescription();
+    showDescriptionWithTagId(button.data("tag-id"));
   });
 
-  function pathToTemplate(skillTag) {
-    return 'includes/' + skillTag + '.html';
+  function showDescriptionWithTagId(tag) {
+    $(tag).removeClass("hidden").addClass("current-description");
+  }
+
+  function hidePreviousDescription() {
+    $(".current-description").removeClass("current-description").addClass("hidden");
   }
 });
