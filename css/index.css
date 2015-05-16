@@ -18,6 +18,10 @@ section {
   margin-bottom: 4px;
 }
 
+button.no-description {
+  cursor: default;
+}
+
 .content .repo-icon {
   width: auto;
   height: 20px;
