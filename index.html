@@ -1,235 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
+
+<head lang="fr-FR">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vincent Tertre</title>
-
-  <link href="tools/css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/index.css" rel="stylesheet">
 
   <meta name="description" content="Page personnelle">
   <meta name="author" content="Vincent Tertre <vincent.tertre@gmail.com>">
 </head>
 
 <body>
-<header>
-  <nav class="navbar navbar-default navbar-static-top navbar-inverse">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
-          <span class="sr-only">Activer la navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/">{ }</a>
-      </div>
-      <div class="collapse navbar-collapse" id="navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="mailto:vincent.tertre@gmail.com">vincent.tertre@gmail.com</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
+  <header>
+  </header>
+  <main>
+    <a href="https://github.com/Yuyuu" title="GitHub">GitHub</a>
+    <a href="https://fr.linkedin.com/in/vincenttertre" title="Profil Linkedin">Linkedin</a>
+  </main>
+  <footer>
+  </footer>
 
-<div class="content">
-  <div class="jumbotron">
-    <div class="container">
-      <p>
-        Bonjour, je suis <strong>Vincent Tertre</strong>.
-        Jeune diplômé, j'ai une passion pour le développement et ambitionne de devenir un dévéloppeur agile de
-        qualité, un artisan du développement (rien que ça !).
-        Pour avancer vers ce but, j'essaye quotidiennement de m'inspirer de personnes expérimentées,
-        de m'initier à des concepts modernes et agiles et d'apprendre de nouvelles technologies.
-      </p>
-
-      <p>
-        Lorsque je développe, je m'applique à respecter au maximum les principes de base
-        de qualité (clean code, tests, simplicité...).
-      </p>
-    </div>
-  </div>
-
-  <section id="education">
-    <div class="container">
-      <h4>Formation</h4>
-
-      <p>
-        Passionné par le développement depuis mes premières années de formation post-bac,
-        j'ai décidé de suivre l'enseignement du
-        <a href="http://www.master-developpement-logiciel.fr/" title="Site du Master DL">Master Développement Logiciel</a>
-        de Toulouse.
-        Je suis surtout marqué par les personnes que j'ai pu rencontrer, qui pour certaines ont été des mentors.<br>
-        Tant au niveau du corps enseignant qu'en entreprise ou au cours d'événements comme l'Agile Tour, plusieurs
-        m'ont permis d'affiner mes envies dans la voie du développement.
-      </p>
-    </div>
-  </section>
-
-  <!--<section id="skills">
-    <div class="container">
-      <h4>Quelques compétences et hobbies...</h4>
-
-      <div class="row">
-        <div class="col-xs-6">
-          <div class="skills">
-            <button type="button" class="btn btn-sm btn-info" data-tag-id="#nodejs">Node.js »</button>
-            <button type="button" class="btn btn-sm btn-info" data-tag-id="#java-groovy">Java / Groovy »</button>
-            <button type="button" class="btn btn-sm btn-info" data-tag-id="#javascript">JavaScript »</button>
-            <button type="button" class="btn btn-sm btn-info" data-tag-id="#grails">Grails »</button>
-            <button type="button" class="btn btn-sm btn-info" data-tag-id="#angularjs">AngularJS »</button>
-            <button type="button" class="btn btn-sm btn-info" data-tag-id="#bootstrap">Bootstrap »</button>
-            <button type="button" class="btn btn-sm btn-info" data-tag-id="#spock">Spock »</button>
-            <button type="button" class="btn btn-sm btn-info" data-tag-id="#rest">REST »</button>
-            <button type="button" class="btn btn-sm btn-info" data-tag-id="#ic">Intégration continue »</button>
-            <button type="button" class="btn btn-sm btn-info" data-tag-id="#git">Git »</button>
-            <button type="button" class="btn btn-sm btn-info" data-tag-id="#ij">IntelliJ IDEA »</button>
-            <button type="button" class="btn btn-sm btn-info" data-tag-id="#sport">Sport »</button>
-            <button type="button" class="btn btn-sm btn-info no-description" data-tag-id="#video-games">Jeux vidéo</button>
-          </div>
-        </div>
-        <div class="col-xs-6">
-          <p id="nodejs" class="hidden">
-            J'ai découvert l'environnement Node.js récemment en autodidacte. Je l'ai depuis utilsé sur quelques
-            petites applications.
-          </p>
-          <p id="java-groovy" class="hidden">
-            J'ai utilisé ces langages (majoritairement Java) sur une multitude de projets. Je suis cependant conscient
-            qu'il me reste beaucoup de choses à apprendre sur ceux-ci.
-          </p>
-          <p id="javascript" class="hidden">
-            J'ai pu découvrir le langage JavaScript en même temps qu'AngularJS. Je l'ai depuis utilisé sur plusieurs
-            applications comme langage principal ou pour de petits scripts ponctuels.
-          </p>
-          <p id="grails" class="hidden">
-            Le framework Grails m'a servi pour le développement de la partie serveur du projet
-            <a href="http://www.elaastic.com/">elaastic</a> sur lequel j'ai travaillé pendant une année.
-          </p>
-          <p id="angularjs"  class="hidden">
-            J'ai découvert le framework AngularJS pour le développement de la partie cliente du projet
-            <a href="http://www.elaastic.com/">elaastic</a>. J'ai depuis eu l'occasion de l'utiliser pour d'autres projets
-            personnels (<a href="https://github.com/Yuyuu/xdcc-webapp">xdcc-webapp</a>).
-          </p>
-          <p id="bootstrap" class="hidden">
-            J'utilise Bootstrap sur l'intégralité de mes applications web.
-          </p>
-          <p id="spock" class="hidden">
-            J'utilise le framework Spock pour effectuer les tests sur plusieurs projets
-            (<a href="https://github.com/Yuyuu/xdcc-watcher/tree/master/src/test/groovy">xdcc-watcher</a>).
-          </p>
-          <p id="rest" class="hidden">
-            J'ai eu l'occasion de développer plusieurs API REST pour différents projets
-            (<a href="https://github.com/Yuyuu/xdcc-api">xdcc-api</a>).
-          </p>
-          <p id="ic" class="hidden">
-            L'intégration continue étant un aspect fondamental du développement, j'ai déjà pu utiliser différents outils
-            comme Jenkins, Travis CI ou encore Codeship pour veiller au bon fonctionnement de mes différents projets.
-          </p>
-          <p id="git" class="hidden">
-            J'utilise Git massivement pour l'ensemble de mes projets.
-          </p>
-          <p id="ij" class="hidden">
-            Ayant été longtemps perturbé par l'aspect terne d'Eclipse, IntelliJ IDEA a amené un plaisir supplémentaire
-            à mes journées de développement.
-          </p>
-          <p id="sport" class="hidden">
-            Fan de sport depuis mon plus jeune âge, j'aime le pratiquer comme le regarder ou le jouer sur jeux vidéo.
-            Après avoir été joueur de basketball pendant plus de 10 ans, je pratique aujourd'hui les sports de raquette
-            et la course à pieds.
-          </p>
-          <p id="video-games" class="hidden">
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>-->
-
-  <section id="projects">
-    <div class="container">
-      <h4>Quelques dépôts</h4>
-
-      <div class="row">
-        <div class="col-xs-12 col-sm-4">
-          <div class="list-group">
-            <a href="https://github.com/Yuyuu/xdcc-api" class="list-group-item">
-              <h4 class="list-group-item-heading">
-                <img src="images/github_repo.png" class="repo-icon">
-                xdcc-api <span class="text-muted small">(2014)</span>
-              </h4>
-
-              <p class="list-group-item-text">
-                API REST du projet XDCC développée en Java à l'aide du serveur web Fluent-http
-              </p>
-            </a>
-
-            <a href="https://github.com/Yuyuu/xdcc-webapp" class="list-group-item">
-              <h4 class="list-group-item-heading">
-                <img src="images/github_repo.png" class="repo-icon">
-                xdcc-webapp <span class="text-muted small">(2015)</span>
-              </h4>
-
-              <p class="list-group-item-text">Client web du projet XDCC développé avec AngularJS</p>
-            </a>
-
-            <a href="https://github.com/Yuyuu/xdcc-watcher" class="list-group-item">
-              <h4 class="list-group-item-heading">
-                <img src="images/github_repo.png" class="repo-icon">
-                xdcc-watcher <span class="text-muted small">(2015)</span>
-              </h4>
-
-              <p class="list-group-item-text">
-                Application Java chargée de tenir à jour les données du projet XDCC mises à disposition par l'API REST
-              </p>
-            </a>
-          </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-4">
-          <div class="list-group">
-            <a href="https://github.com/Yuyuu/agoodfriendalwayspayshisdebts-api" class="list-group-item">
-              <h4 class="list-group-item-heading">
-                <img src="images/github_repo.png" class="repo-icon">
-                agoodfriendalwayspayshisdebts-api <span class="text-muted small">(2015)</span>
-              </h4>
-
-              <p class="list-group-item-text">API REST dévelopée en Java</p>
-            </a>
-
-            <a href="https://github.com/Yuyuu/agoodfriendalwayspayshisdebts-webapp" class="list-group-item">
-              <h4 class="list-group-item-heading">
-                <img src="images/github_repo.png" class="repo-icon">
-                agoodfriendalwayspayshisdebts-webapp <span class="text-muted small">(2015)</span>
-              </h4>
-
-              <p class="list-group-item-text">Application web AngularJS</p>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-
-<footer>
-  <div class="container separator">
-    <hr>
-  </div>
-  <div class="thumbnails text-center">
-    <a href="https://github.com/Yuyuu" title="Profil GitHub">
-      <img src="images/github_logo.png">
-    </a>
-    <a href="https://fr.linkedin.com/in/vincenttertre" title="Profil Linkedin">
-      <img src="images/linkedin_logo.png">
-    </a>
-  </div>
-  <p class="text-center">© Vincent Tertre 2015</p>
-</footer>
-
-<script src="js/google_analytics.js"></script>
-<script src="tools/js/jquery-1.11.3.min.js"></script>
-<script src="tools/js/bootstrap.min.js"></script>
-<script src="js/skills.js"></script>
+  <script src="js/google_analytics.js"></script>
 </body>
+
 </html>
