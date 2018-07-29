@@ -1,8 +1,19 @@
 language: node_js
 sudo: false
 node_js:
-  - "node"
+- node
+cache: yarn
 
+before_install:
+- openssl aes-256-cbc -K $encrypted_fb168f48dc0a_key -iv $encrypted_fb168f48dc0a_iv
+  -in travis_service_account_key.json.enc -out travis_service_account_key.json -d
 script: yarn lint && yarn test:unit
 
-cache: yarn
+deploy:
+  provider: gae
+  project: page-perso-211118
+  version: main
+  keyfile: travis_service_account_key.json
+  skip_cleanup: true
+  verbosity: info
+  on: master
