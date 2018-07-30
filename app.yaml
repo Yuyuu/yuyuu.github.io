@@ -47,6 +47,7 @@ skip_files:
 - babel.config.js
 - travis_service_account_key.json
 - travis_service_account_key.json.enc
+- vue.config.js
 - src/
 - node_modules/
 - tests/
