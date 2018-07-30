@@ -1,0 +1,53 @@
+service: default
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+env_variables:
+  env: 'dev'
+
+handlers:
+- url: /([a-z0-9_\-\.]+\.[a-z]+)$
+  static_files: dist/\1
+  upload: dist/[a-z0-9_\-\.]+\.[a-z]+$
+  secure: always
+
+- url: /assets
+  static_dir: dist/assets
+  secure: always
+
+- url: /img
+  static_dir: dist/img
+  secure: always
+
+- url: /.*
+  script: server.main.server
+  secure: always
+
+libraries:
+- name: ssl
+  version: latest
+
+skip_files:
+- ^(.*/)?.*\.py[co]$
+- ^venv$
+- .idea/
+- .vscode
+- .git/
+- .editorconfig
+- .gitignore
+- .travis.yml
+- requirements.txt
+- yarn.lock
+- package.json
+- README.md
+- .browserslistrc
+- .eslintrc.js
+- .postcssrc.js
+- babel.config.js
+- travis_service_account_key.json
+- travis_service_account_key.json.enc
+- src/
+- node_modules/
+- tests/
+- public/
