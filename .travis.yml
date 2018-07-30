@@ -9,9 +9,6 @@ script: yarn lint && yarn test:unit
 before_deploy:
 - openssl aes-256-cbc -K $encrypted_fb168f48dc0a_key -iv $encrypted_fb168f48dc0a_iv
   -in travis_service_account_key.json.enc -out travis_service_account_key.json -d
-- sudo apt-get install python-pip
-- sudo pip install --upgrade pip 
-- sudo pip install -r requirements.txt -t libs/
 - yarn build
 deploy:
   provider: gae

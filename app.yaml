@@ -7,6 +7,11 @@ env_variables:
   env: 'dev'
 
 handlers:
+- url: /
+  static_files: dist/index.html
+  upload: dist/index.html
+  secure: always
+
 - url: /([a-z0-9_\-\.]+\.[a-z]+)$
   static_files: dist/\1
   upload: dist/[a-z0-9_\-\.]+\.[a-z]+$
@@ -19,14 +24,6 @@ handlers:
 - url: /img
   static_dir: dist/img
   secure: always
-
-- url: /.*
-  script: server.main.server
-  secure: always
-
-libraries:
-- name: ssl
-  version: latest
 
 skip_files:
 - ^(.*/)?.*\.py[co]$
@@ -48,6 +45,7 @@ skip_files:
 - travis_service_account_key.json
 - travis_service_account_key.json.enc
 - vue.config.js
+- bin/
 - src/
 - node_modules/
 - tests/
