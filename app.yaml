@@ -19,7 +19,7 @@ handlers:
   static_files: dist/service-worker.js
   upload: dist/service-worker.js
   secure: always
-  expiration: "0s"
+  expiration: "0m"
 
 - url: /([a-z0-9_\-\.]+\.[a-z]+)$
   static_files: dist/\1
