@@ -3,11 +3,18 @@ import Vue from 'vue';
 import './plugins/vuetify';
 import App from './App.vue';
 import router from './router';
-import './registerServiceWorker';
+import registerServiceWorker from './registerServiceWorker';
 
 Vue.config.productionTip = false;
 
-new Vue({
+const app = new Vue({
   router,
   render: h => h(App)
-}).$mount('#app');
+});
+
+router.onReady(() => {
+  app.$mount('#app');
+  if (process.env.NODE_ENV === 'production') {
+    registerServiceWorker();
+  }
+});

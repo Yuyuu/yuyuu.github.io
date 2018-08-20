@@ -15,6 +15,12 @@ handlers:
   upload: dist/index.html
   secure: always
 
+- url: /service-worker.js
+  static_files: dist/service-worker.js
+  upload: dist/service-worker.js
+  secure: always
+  expiration: "0s"
+
 - url: /([a-z0-9_\-\.]+\.[a-z]+)$
   static_files: dist/\1
   upload: dist/[a-z0-9_\-\.]+\.[a-z]+$
