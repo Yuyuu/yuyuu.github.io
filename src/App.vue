@@ -30,10 +30,8 @@ body {
   max-width: 960px;
 }
 
-a {
+a,
+a:visited {
   color: inherit;
-  &:visited {
-    color: inherit;
-  }
 }
 </style>
