@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid="" class="py-0">
+  <v-container fluid="" class="pa-0 mb-4">
       <v-flex xs12="">
         <v-layout row="" align-center="" justify-start="" fill-height="">
           <v-avatar size="72" class="elevation-1">
@@ -10,8 +10,8 @@
               <v-layout column="" align-start="" justify-start="" fill-height="">
                 <h1>Vincent Tertre</h1>
                 <nav>
-                  <a href="https://github.com/vtertre" title="GitHub account">GitHub</a> |
-                  <a href="https://linkedin.com/in/vincenttertre" title="LinkedIn account">LinkedIn</a>
+                  <a href="https://github.com/vtertre" title="Profil GitHub">GitHub</a> |
+                  <a href="https://linkedin.com/in/vincenttertre" title="Page LinkedIn">LinkedIn</a>
                 </nav>
               </v-layout>
             </v-flex>

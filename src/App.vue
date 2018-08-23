@@ -23,15 +23,21 @@ export default {
 <style lang="scss">
 body {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   margin: 40px auto;
   max-width: 960px;
+  padding: 0 10px;
 }
 
 a,
 a:visited {
   color: inherit;
+}
+
+a:hover {
+  color: #4CAF50;
 }
 </style>
