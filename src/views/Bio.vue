@@ -13,24 +13,6 @@
       </p>
     </section>
     <section>
-      <h3>Mes appétences</h3>
-      <p>
-        Ce que j'aime à l'heure actuelle c'est travailler en équipe sur des
-        produits, plutôt web, trouver les briques techniques les plus adéquates,
-        les implémenter, les assembler et les déployer sur des plateformes
-        Cloud modernes.<br>Je souhaite travailler avec une méthodologie portée
-        sur la collaboration et la progression collective : un contexte fait
-        de sessions de Pair Programming et de code reviews est une source
-        de motivation particulièrement importante.
-      </p>
-      <p>
-        La technologie utilisée n'est pas spécialement un critère pour moi. Même
-        si je possède des connaissances plus approfondies sur certaines, elles ne sont
-        que des outils pour parvenir à une solution optimale. Et puis je suis toujours
-        preneur pour élargir mon spectre de compétences.
-      </p>
-    </section>
-    <section>
       <h3>Ma philosophie de travail</h3>
       <p>
         Dans mon travail, j'essaye d'être le plus simple et le plus compréhensible possible
