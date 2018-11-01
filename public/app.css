@@ -133,3 +133,23 @@ p {
 .practices > span:not(:last-of-type) {
   margin-right: 8px;
 }
+
+.experience:not(:first-of-type) {
+  padding-top: 25px;
+}
+
+.experience:not(:last-child):after {
+  content: "";
+  width: 10%;
+  border-bottom: 1px solid var(--primary-color);
+  display: block;
+  padding-bottom: 25px;
+}
+
+.experience h4 small {
+  font-weight: 100;
+}
+
+.experience p:last-of-type {
+  margin-bottom: 0;
+}
