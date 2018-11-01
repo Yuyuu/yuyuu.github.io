@@ -6,56 +6,23 @@ instance_class: F1
 automatic_scaling:
   max_instances: 1
 
-env_variables:
-  env: 'dev'
-
 handlers:
 - url: /
-  static_files: dist/index.html
-  upload: dist/index.html
+  static_files: index.html
+  upload: index.html
   secure: always
 
-- url: /service-worker.js
-  static_files: dist/service-worker.js
-  upload: dist/service-worker.js
-  secure: always
-  expiration: "0m"
-
-- url: /([a-z0-9_\-\.]+\.[a-z]+)$
-  static_files: dist/\1
-  upload: dist/[a-z0-9_\-\.]+\.[a-z]+$
-  secure: always
-
-- url: /assets
-  static_dir: dist/assets
-  secure: always
-
-- url: /img
-  static_dir: dist/img
+- url: /public
+  static_dir: public
   secure: always
 
 skip_files:
-- ^(.*/)?.*\.py[co]$
-- ^venv$
 - .idea/
 - .vscode
 - .git/
 - .editorconfig
 - .gitignore
 - .travis.yml
-- requirements.txt
-- yarn.lock
-- package.json
 - README.md
-- .browserslistrc
-- .eslintrc.js
-- .postcssrc.js
-- babel.config.js
 - travis_service_account_key.json
 - travis_service_account_key.json.enc
-- vue.config.js
-- bin/
-- src/
-- node_modules/
-- tests/
-- public/
