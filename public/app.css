@@ -116,3 +116,20 @@ p {
     opacity: 1;
   }
 }
+
+.practices {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 5px;
+}
+
+.practices > span {
+  border: 1px solid var(--primary-color);
+  padding: 3px 12px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+.practices > span:not(:last-of-type) {
+  margin-right: 8px;
+}
