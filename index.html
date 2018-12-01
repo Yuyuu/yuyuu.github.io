@@ -5,10 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="Description" content="Ma page personnelle avec des détails sur mes envies professionnelles et mes expériences passées.">
+  <meta name="theme-color" content="#4CAF50">
 
-  <link rel="icon" href="/public/image/favicon.ico">
-
-  <link rel="stylesheet" href="/public/app/app.css">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" href="/assets/image/favicon.ico">
+  <link rel="stylesheet" href="/assets/app/app.css">
 
   <title>Vincent Tertre</title>
 </head>
@@ -17,7 +18,7 @@
   <header>
     <div class="header__wrapper">
       <div class="avatar">
-        <img src="/public/image/avatar.jpg" alt="Avatar">
+        <img src="/assets/image/avatar.jpg" alt="Avatar">
       </div>
       <div class="header__content">
         <h1>Vincent Tertre</h1>
@@ -112,7 +113,14 @@
     </div>
   </main>
 
-  <script src="/public/app/app.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/service-worker.js');
+      });
+    }
+  </script>
+  <script src="/assets/app/app.js" type="text/javascript"></script>
 </body>
 
 </html>

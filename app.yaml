@@ -14,20 +14,37 @@ handlers:
   upload: index.html
   secure: always
 
+- url: /service-worker.js
+  static_files: service-worker.js
+  upload: service-worker.js
+  secure: always
+  expiration: "0s"
+
+- url: /manifest.json
+  static_files: manifest.json
+  upload: manifest.json
+  secure: always
+  expiration: "0s"
+
 - url: /robots.txt
-  static_files: public/robots.txt
-  upload: public/robots.txt
+  static_files: robots.txt
+  upload: robots.txt
   secure: always
   expiration: "30d"
 
-- url: /public/app
-  static_dir: public/app
+- url: /assets/app
+  static_dir: assets/app
   secure: always
 
-- url: /public/image
-  static_dir: public/image
+- url: /assets/image
+  static_dir: assets/image
   secure: always
   expiration: "5d"
+
+- url: /assets/icons
+  static_dir: assets/icons
+  secure: always
+  expiration: "10d"
 
 - url: /.*
   static_files: 404.html
