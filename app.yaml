@@ -14,6 +14,12 @@ handlers:
   upload: index.html
   secure: always
 
+- url: /robots.txt
+  static_files: public/robots.txt
+  upload: public/robots.txt
+  secure: always
+  expiration: "30d"
+
 - url: /public/app
   static_dir: public/app
   secure: always
