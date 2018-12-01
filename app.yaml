@@ -23,6 +23,13 @@ handlers:
   secure: always
   expiration: "5d"
 
+- url: /.*
+  static_files: 404.html
+  upload: 404.html
+  secure: always
+  expiration: "1d"
+
+
 skip_files:
 - .idea/
 - .vscode
