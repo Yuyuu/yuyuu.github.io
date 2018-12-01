@@ -11,21 +11,25 @@ const filesToCache = [
   '/assets/icons/android-chrome-512x512.png'
 ];
 
-self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open('vincenttertre-v1').then(cache => cache.addAll(filesToCache))
+self.addEventListener('install', function (event) {
+  return event.waitUntil(
+    caches.open('vincenttertre-v1').then(function (cache) {
+      return cache.addAll(filesToCache);
+    })
   );
 });
 
-self.addEventListener('activate', event => {
+self.addEventListener('activate', function (event) {
   event.waitUntil(
-    caches.keys().then(keys => Promise.all(
-      keys.map(key => {
-        if (expectedCaches.indexOf(key) === -1) {
-          return caches.delete(key);
-        }
-      })
-    ))
+    caches.keys().then(function (keys) {
+      return Promise.all(
+        keys.map(function (key) {
+          if (expectedCaches.indexOf(key) === -1) {
+            return caches.delete(key);
+          }
+        })
+      )
+    })
   );
 });
 
