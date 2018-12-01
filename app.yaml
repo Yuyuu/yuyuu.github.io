@@ -14,16 +14,14 @@ handlers:
   upload: index.html
   secure: always
 
-- url: /public/(.*\.(jpg|ico))$
-  static_files: public/\1
-  upload: public/.*\.(jpg|ico)$
+- url: /public/app
+  static_dir: public/app
+  secure: always
+
+- url: /public/image
+  static_dir: public/image
   secure: always
   expiration: "5d"
-
-- url: /public/(.*)
-  static_files: public/\1
-  upload: /public/.*
-  secure: always
 
 skip_files:
 - .idea/
