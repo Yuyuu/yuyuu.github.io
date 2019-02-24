@@ -66,14 +66,7 @@ function isExpired(cachedResponse) {
     const effectiveMaxAge = parseInt(maxAge ? maxAge[1] * 1000 : 0, 10);
     const cachedResponseDate = new Date(headers.get('date')).getTime();
     const now = new Date().getTime();
-    if (now - cachedResponseDate > effectiveMaxAge) {
-      console.log("Expired");
-      console.log('Now: ', now);
-      console.log('Date: ', cachedResponseDate);
-      console.log('Max Age: ', effectiveMaxAge);
-      return true;
-    }
-    return false;
+    return now - cachedResponseDate > effectiveMaxAge;
   }
 
   if (headers.has('expires')) {
