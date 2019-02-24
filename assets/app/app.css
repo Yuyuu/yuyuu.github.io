@@ -76,6 +76,20 @@ p {
   border-radius: 50%;
 }
 
+.badges {
+  width: 72px;
+  height: 72px;
+}
+
+.badges .badge, .badges img {
+  width: inherit;
+  height: inherit;
+}
+
+.badge {
+  border-radius: 50%;
+}
+
 .tabs {
   overflow: hidden;
 }
