@@ -34,7 +34,6 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   event.respondWith(async function () {
     const cacheResponse = await caches.match(event.request);
-    console.log(event.request.url);
     if (cacheResponse) {
       if (isExpired(cacheResponse)) {
         const refreshRequest = buildRefreshRequest(event.request, cacheResponse);
