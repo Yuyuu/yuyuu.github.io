@@ -63,7 +63,7 @@ function isExpired(cachedResponse) {
   const headers = cachedResponse.headers;
   if (headers.has('cache-control') && headers.has('date')) {
     const maxAge = headers.get('cache-control').match(maxAgeRegExp);
-    const effectiveMaxAge = parseInt(maxAge ? maxAge[1] : 0, 10);
+    const effectiveMaxAge = parseInt(maxAge ? maxAge[1] * 1000 : 0, 10);
     const cachedResponseDate = new Date(headers.get('date')).getTime();
     const now = new Date().getTime();
     if (now - cachedResponseDate > effectiveMaxAge) {
