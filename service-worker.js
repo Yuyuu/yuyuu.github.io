@@ -34,6 +34,7 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   event.respondWith(async function () {
     const cacheResponse = await caches.match(event.request);
+    console.log(event.request.url);
     if (cacheResponse) {
       if (isExpired(cacheResponse)) {
         const refreshRequest = buildRefreshRequest(event.request, cacheResponse);
@@ -65,7 +66,14 @@ function isExpired(cachedResponse) {
     const effectiveMaxAge = parseInt(maxAge ? maxAge[1] : 0, 10);
     const cachedResponseDate = new Date(headers.get('date')).getTime();
     const now = new Date().getTime();
-    return now - cachedResponseDate > effectiveMaxAge;
+    if (now - cachedResponseDate > effectiveMaxAge) {
+      console.log("Expired");
+      console.log('Now: ', now);
+      console.log('Date: ', cachedResponseDate);
+      console.log('Max Age: ', effectiveMaxAge);
+      return true;
+    }
+    return false;
   }
 
   if (headers.has('expires')) {
@@ -84,7 +92,7 @@ async function renew(response) {
   response.headers.forEach((value, key) => {
     headers[key] = value;
   });
-  headers.date = now.toUTCString()
+  headers.date = now.toUTCString();
   headers.expires = new Date(now.getTime() + effectiveMaxAge * 1000).toUTCString();
   const body = await response.blob();
   return new Response(body, { headers: headers });
